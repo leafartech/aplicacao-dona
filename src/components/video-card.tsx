@@ -9,8 +9,8 @@ export default function VideoCard({ src, name, description }: { src: string, nam
             className="rounded-xl w-full h-60">
           </iframe>
           <div className="flex flex-col text-center">
-            <h4 className="text-xl font-semibold">{name}</h4>
-            <p className="text-zinc-600">{description}</p>
+            <h4 className="text-xl font-semibold text-white ">{name}</h4>
+            <p className="text-zinc-200">{description}</p>
           </div>
         </div>
     )

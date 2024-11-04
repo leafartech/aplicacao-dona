@@ -16,7 +16,7 @@ export default function Page() {
                         />
                     </div>
                 </div>
-                <Section className="pt-24 px-4">
+                <Section className="sm:py-24 pt-24 pb-16 px-4">
                     <div className="flex flex-col gap-6">
                         <div className="flex flex-col text-center">
                             <h2 className="text-4xl font-bold">Atenção Dona</h2>
@@ -70,10 +70,10 @@ export default function Page() {
                         </div>
                     </div>
                 </Section>
-                <Section className="py-12 sm:py-24 px-4">
+                <Section className="py-12 sm:py-24 px-4" classNameS="bg-zinc-800">
                     <div className="flex flex-col gap-12">
                         <div className="flex items-center flex-col gap-4">
-                            <h2 className="font-bold text-xl sm:text-3xl text-center">Conheça a nossa Pós-Graduação por dentro</h2>
+                            <h2 className="text-white font-bold text-xl sm:text-3xl text-center">Conheça a nossa Pós-Graduação por dentro</h2>
                             <div className="pt-4 w-full max-w-3xl">
                                 <iframe
                                     id="panda-527e4247-193a-4d1b-8d22-7481982fdb10"
@@ -85,7 +85,7 @@ export default function Page() {
                             </div>
                         </div>
                         <div className="flex flex-col items-center gap-4">
-                            <h2 className="font-bold text-xl sm:text-3xl text-center max-w-3xl">Pouco tempo atrás, elas também estavam se matriculando nesse mesmo lugar que você tá agora</h2>
+                            <h2 className="font-bold text-xl sm:text-3xl text-center max-w-3xl text-white ">Pouco tempo atrás, elas também estavam se matriculando nesse mesmo lugar que você tá agora</h2>
                             <div className="flex justify-center gap-8 flex-wrap">
                                 <VideoCard
                                     name="Etiana Oliveira"
@@ -122,7 +122,7 @@ export default function Page() {
                     </div>
                 </Section>
             </main>
-            <footer className="bg-zinc-800 text-center text-white py-4">
+            <footer className="bg-zinc-900 text-center text-white py-4 sm:mt-0 -mt-[1px]">
                 <p>Dona do Plantão. Todos os direitos reservados. Políticas de Privacidade.</p>
             </footer>
         </>
