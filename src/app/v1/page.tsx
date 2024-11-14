@@ -194,7 +194,7 @@ export default function Page() {
                             <li className="">{'>'} <strong>Simulações realísticas</strong> (presenciais ou online) para você <strong>desenvolver sua segurança</strong> nos plantões</li>
                             <li className="">{'>'} Conteúdos vivenciais voltados para a prática para que você seja <strong>reconhecida como referência pelos seus colegas</strong> de trabalho</li>
                             <li className="">{'>'} Habilidades socioemocionais para que você <strong>lidere a sua equipe sem parecer autoritária ou {`“`}boazinha{`”`}</strong> demais</li>
-                        </ul>
+                        </ul> 
                         <Button label="Quero preencher a aplicação" />
                     </div>
                     <div className="absolute bottom-0 right-0 w-full h-[500px] sm:w-[512px] sm:h-[764px] z-50">
