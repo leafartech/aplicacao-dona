@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Page() {
     return (
         <>
-            <main className="bg-zinc-100 min-h-screen w-full">
+            <main className="bg-zinc-100 min-h-screen w-full text-black">
                 <div className="bg-zinc-800 fixed top-0 left-0 w-full z-[9999] flex justify-center items-center py-2">
                     <div className="relative w-[240px] h-[32px]">
                         <Image
@@ -18,9 +18,9 @@ export default function Page() {
                 </div>
                 <Section className="sm:py-24 pt-24 pb-16 px-4">
                     <div className="flex flex-col gap-6">
-                        <div className="flex flex-col text-center">
-                            <h2 className="text-4xl font-bold">Atenção Dona</h2>
-                            <p className="text-xl max-w-2xl">Siga os 3 passos abaixo abaixo para resgatar o seu presente surpresa pós-aplicação 👇</p>
+                        <div className="flex flex-col text-center ">
+                            <h2 className="text-black text-4xl font-bold">Atenção Dona</h2>
+                            <p className="text-black text-xl max-w-2xl">Siga os 3 passos abaixo abaixo para resgatar o seu presente surpresa pós-aplicação 👇</p>
                         </div>
                         <div className="sm:max-w-2xl px-4">
                             <ul className="flex flex-col gap-6 sm:py-12 py-8 sm:px-8 px-6 border border-zinc-600 rounded-xl">

@@ -1,10 +1,26 @@
+"use client"
+
 import Button from "@/components/button";
-import Discipline from "@/components/discipline";
+import Dropdown from "@/components/dropdown";
+import { Modal } from "@/components/modal";
 import Section from "@/components/section";
 import VideoCard from "@/components/video-card";
 import Image from "next/image";
+import React, { useState } from "react";
 
-export default function Page() {
+interface PageProps {
+    searchParams: {
+      utm_content?: string
+      utm_campaign?: string
+      utm_term?: string
+      utm_source?: string
+      utm_medium?: string
+    }
+  } 
+
+export default function Page({ searchParams }: PageProps) {
+
+    const [isOpen, setIsOpen] = useState<boolean>(false)
 
     const disciplines = [
         {
@@ -194,8 +210,8 @@ export default function Page() {
                             <li className="">{'>'} <strong>Simulações realísticas</strong> (presenciais ou online) para você <strong>desenvolver sua segurança</strong> nos plantões</li>
                             <li className="">{'>'} Conteúdos vivenciais voltados para a prática para que você seja <strong>reconhecida como referência pelos seus colegas</strong> de trabalho</li>
                             <li className="">{'>'} Habilidades socioemocionais para que você <strong>lidere a sua equipe sem parecer autoritária ou {`“`}boazinha{`”`}</strong> demais</li>
-                        </ul> 
-                        <Button label="Quero preencher a aplicação" />
+                        </ul>
+                        <Button open={isOpen} setOpen={setIsOpen} label="Quero preencher a aplicação" />
                     </div>
                     <div className="absolute bottom-0 right-0 w-full h-[500px] sm:w-[512px] sm:h-[764px] z-50">
                         <Image
@@ -210,7 +226,7 @@ export default function Page() {
                 <div className="absolute right-0 sm:top-0 bottom-0 w-40 h-40 bg-orange-500 blur-[124px]"></div>
             </header>
             <main>
-                <Section classNameS="py-16 sm:py-24 bg-zinc-50 px-4">
+                <Section classNameS="py-16 sm:py-24 bg-zinc-50 px-4 text-black">
                     <div className="sm:grid sm:grid-cols-2 flex flex-col items-center">
                         <div className="relative sm:w-[512px] sm:h-[394px]">
                             <Image
@@ -256,7 +272,7 @@ export default function Page() {
                                 src="https://player-vz-d6af11ef-db4.tv.pandavideo.com.br/embed/?v=a9daf0ff-953a-4240-ae37-20329b645cbf&iosFakeFullscreen=true"
                             />
                         </div>
-                        <Button label="Quero preencher a aplicação" />
+                        <Button open={isOpen} setOpen={setIsOpen} label="Quero preencher a aplicação" />
                     </div>
                 </Section>
                 <Section classNameS="relative py-14 sm:py-24 bg-zinc-900 px-4">
@@ -272,16 +288,34 @@ export default function Page() {
                                 classNameVideo="h-[316px] rounded"
                             />
                         </div>
-                        <Button label="Quero preencher a aplicação" />
+                        <Button open={isOpen} setOpen={setIsOpen} label="Quero preencher a aplicação" />
                     </div>
                     <div className="absolute left-0 bottom-0 w-40 h-40 bg-orange-500 blur-[124px]"></div>
                 </Section>
-                <Section classNameS="py-12 sm:py-24 bg-zinc-50 px-4">
-                    <div className="flex flex-col items-start gap-12">
-                        <h2 className="text-3xl font-semibold">Disciplinas</h2>
-                        <div className="flex flex-col gap-4">
+                <Section classNameS="py-12 sm:py-24 bg-zinc-50 px-4 text-black">
+                    <div className="flex flex-col items-start sm:items-center gap-6 sm:gap-12">
+                        <div className="flex flex-col sm:items-center">
+                            <h2 className="text-2xl sm:text-3xl font-semibold">Conteúdo Programático</h2>
+                            <p className="mt-2 text-zinc-600 flex items-center gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" className="fill-zinc-600"><path d="M260-320q47 0 91.5 10.5T440-278v-394q-41-24-87-36t-93-12q-36 0-71.5 7T120-692v396q35-12 69.5-18t70.5-6Zm260 42q44-21 88.5-31.5T700-320q36 0 70.5 6t69.5 18v-396q-33-14-68.5-21t-71.5-7q-47 0-93 12t-87 36v394Zm-40 97q-14 0-26.5-3.5T430-194q-39-23-82-34.5T260-240q-42 0-82.5 11T100-198q-21 11-40.5-1T40-234v-482q0-11 5.5-21T62-752q46-24 96-36t102-12q58 0 113.5 15T480-740q51-30 106.5-45T700-800q52 0 102 12t96 36q11 5 16.5 15t5.5 21v482q0 23-19.5 35t-40.5 1q-37-20-77.5-31T700-240q-45 0-88 11.5T530-194q-11 6-23.5 9.5T480-181ZM280-494Zm280-115q0-9 6.5-18.5T581-640q29-10 58-15t61-5q20 0 39.5 2.5T778-651q9 2 15.5 10t6.5 18q0 17-11 25t-28 4q-14-3-29.5-4.5T700-600q-26 0-51 5t-48 13q-18 7-29.5-1T560-609Zm0 220q0-9 6.5-18.5T581-420q29-10 58-15t61-5q20 0 39.5 2.5T778-431q9 2 15.5 10t6.5 18q0 17-11 25t-28 4q-14-3-29.5-4.5T700-380q-26 0-51 4.5T601-363q-18 7-29.5-.5T560-389Zm0-110q0-9 6.5-18.5T581-530q29-10 58-15t61-5q20 0 39.5 2.5T778-541q9 2 15.5 10t6.5 18q0 17-11 25t-28 4q-14-3-29.5-4.5T700-490q-26 0-51 5t-48 13q-18 7-29.5-1T560-499Z" /></svg>
+                                <span>Carga horária: 360 horas</span>
+                            </p>
+                            <p className="text-zinc-600 flex items-center gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" className="fill-zinc-600"><path d="m480-483-68 52q-6 5-12 .5t-4-11.5l26-84-70-56q-5-5-3-11.5t9-6.5h86l26-82q2-7 10-7t10 7l26 82h85q7 0 9.5 6.5T608-582l-71 56 26 84q2 7-4 11.5t-12-.5l-67-52Zm0 363L293-58q-20 7-36.5-5T240-95v-254q-38-42-59-96t-21-115q0-134 93-227t227-93q134 0 227 93t93 227q0 61-21 115t-59 96v254q0 20-16.5 32T667-58l-187-62Zm0-200q100 0 170-70t70-170q0-100-70-170t-170-70q-100 0-170 70t-70 170q0 100 70 170t170 70ZM320-159l160-41 160 41v-124q-35 20-75.5 31.5T480-240q-44 0-84.5-11.5T320-283v124Zm160-62Z" /></svg>
+                                <span>Reconhecido pelo MEC</span>
+                            </p>
+                            <p className="text-zinc-600 flex items-center gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" className="fill-zinc-600"><path d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-40q0-17 11.5-28.5T280-880q17 0 28.5 11.5T320-840v40h320v-40q0-17 11.5-28.5T680-880q17 0 28.5 11.5T720-840v40h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Zm280 240q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240Z" /></svg>
+                                <span>Duração: 12 meses</span>
+                            </p>
+                        </div>
+                        <div className="flex flex-col gap-2">
                             {disciplines.map((discipline, index: number) => (
-                                <Discipline data={discipline} key={index} />
+                                <React.Fragment key={index}>
+                                    <Dropdown data={discipline} key={index} />
+                                    {index + 1 !== disciplines.length && <hr />}
+                                </React.Fragment>
+
                             ))}
                         </div>
                         <div className="w-full flex flex-col items-center gap-12">
@@ -293,11 +327,11 @@ export default function Page() {
                                     layout="fill"
                                 />
                             </div>
-                            <Button label="Quero preencher a aplicação" />
+                            <Button open={isOpen} setOpen={setIsOpen} label="Quero preencher a aplicação" />
                         </div>
                     </div>
                 </Section>
-                <Section classNameS="py-0 bg-zinc-50 px-4">
+                <Section classNameS="py-0 bg-zinc-50 px-4 text-black">
                     <div className="flex flex-col items-center gap-8 sm:gap-12 text-center">
                         <h2 className="text-3xl font-semibold text-center">O que nossas aulas estão falando?</h2>
                         <div className="flex sm:flex-row flex-col gap-8 justify-center">
@@ -328,13 +362,18 @@ export default function Page() {
                         </div>
                     </div>
                 </Section>
-                <Section classNameS="py-12 sm:py-24 bg-zinc-50 px-4">
+                <Section classNameS="py-12 sm:py-24 bg-zinc-50 px-4 text-black">
                     <div className="flex flex-col items-center gap-4 max-w-xl text-center">
                         <h2 className="text-3xl font-semibold">Ficou com alguma dúvida?</h2>
                         <p className="text-base sm:text-lg">Tudo o que você precisa é apertar no botão abaixo, preencher sua aplicação e entrar em contato com nosso time de matrículas pelo WhatsApp.</p>
-                        <Button label="Quero preencher a aplicação" />
+                        <Button open={isOpen} setOpen={setIsOpen} label="Quero preencher a aplicação" />
                     </div>
                 </Section>
+                <Modal
+                    searchParams={searchParams}
+                    open={isOpen}
+                    setOpen={setIsOpen}
+                />
             </main>
             <footer className="text-center bg-zinc-900 text-white py-2 text-sm">
                 <p className="opacity-80"><strong>Dona do Plantão</strong> | Todos os direitos reservados.</p>
