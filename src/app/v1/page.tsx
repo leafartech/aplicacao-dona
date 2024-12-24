@@ -28,7 +28,7 @@ interface PageProps {
 }
 
 export default function Page({ searchParams }: PageProps) {
-	const [isOpen, setIsOpen] = useState<boolean>(false);
+	const [isOpen, setIsOpen] = useState(false);
 
 	return (
 		<>
