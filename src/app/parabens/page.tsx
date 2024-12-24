@@ -65,6 +65,7 @@ export default function Page() {
 								/>
 							</div>
 						</div>
+                        
 						<div className="flex flex-col items-center gap-4">
 							<h2 className="font-bold text-xl sm:text-3xl text-center max-w-3xl text-white ">
 								Pouco tempo atrás, elas também estavam se matriculando nesse

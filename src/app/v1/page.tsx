@@ -130,6 +130,7 @@ export default function Page({ searchParams }: PageProps) {
 				<Section classNameS="py-12 sm:py-24 bg-zinc-50 px-4 text-black">
 					<div className="flex flex-col items-center gap-4 max-w-xl text-center">
 						<h2 className="text-3xl font-semibold">Ficou com alguma dúvida?</h2>
+                        
 						<p className="text-base sm:text-lg">
 							Tudo o que você precisa é apertar no botão abaixo, preencher sua
 							aplicação e entrar em contato com nosso time de matrículas pelo
