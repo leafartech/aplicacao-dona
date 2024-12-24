@@ -35,18 +35,20 @@ export default function Page({ searchParams }: PageProps) {
 			<Header.Root>
 				<Header.Wrapper>
 					<div className="max-w-2xl flex flex-col gap-8 text-white">
-						<Badge
-							text="Lote de Ano Novo: Turma de 2025 com valor de 2024!"
-							icon={Gift}
-							className="hidden sm:inline-flex sm:items-center max-w-[428px]"
-						/>
+						<div className="flex flex-col gap-4">
+							<Badge
+								text="Lote de Ano Novo: Turma de 2025 com valor de 2024!"
+								icon={Gift}
+								className="hidden sm:inline-flex sm:items-center max-w-96"
+							/>
 
-						<Header.Title>
-							Pós-Graduação em{" "}
-							<span className="text-primary">Enfermagem em Urgência</span> e{" "}
-							<span className="text-primary">Emergência Hospitalar</span> com
-							Ênfase em Inovação
-						</Header.Title>
+							<Header.Title>
+								Pós-Graduação em{" "}
+								<span className="text-primary">Enfermagem em Urgência</span> e{" "}
+								<span className="text-primary">Emergência Hospitalar</span> com
+								Ênfase em Inovação
+							</Header.Title>
+						</div>
 
 						<Header.List />
 
@@ -80,7 +82,8 @@ export default function Page({ searchParams }: PageProps) {
 				<Section classNameS="relative py-14 sm:py-24 bg-zinc-900 px-4">
 					<div className="flex flex-col items-center gap-8 sm:gap-12 text-white">
 						<h2 className="text-3xl font-semibold">
-							Confira nossa Plataforma por dentro
+							Confira nossa{" "}
+							<span className="text-primary">Plataforma por dentro</span>
 						</h2>
 
 						<div className="w-full flex flex-wrap gap-12">
@@ -129,8 +132,10 @@ export default function Page({ searchParams }: PageProps) {
 
 				<Section classNameS="py-12 sm:py-24 bg-zinc-50 px-4 text-black">
 					<div className="flex flex-col items-center gap-4 max-w-xl text-center">
-						<h2 className="text-3xl font-semibold">Ficou com alguma dúvida?</h2>
-                        
+						<h2 className="text-3xl font-semibold">
+							Ficou com <span className="text-primary">alguma dúvida?</span>
+						</h2>
+
 						<p className="text-base sm:text-lg">
 							Tudo o que você precisa é apertar no botão abaixo, preencher sua
 							aplicação e entrar em contato com nosso time de matrículas pelo

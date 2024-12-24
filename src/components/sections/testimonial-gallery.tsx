@@ -6,7 +6,7 @@ export function TestimonialGallery() {
 		<Section classNameS="py-0 bg-zinc-50 px-4 text-black">
 			<div className="flex flex-col items-center gap-8 sm:gap-12 text-center">
 				<h2 className="text-3xl font-semibold text-center">
-					O que nossas aulas estão falando?
+					O que <span className="text-primary">nossas alunas</span> estão falando
 				</h2>
 				<div className="flex sm:flex-row flex-col gap-8 justify-center">
 					<div className="relative w-[350px] h-[640px] sm:w-[300px] sm:h-[648px]">

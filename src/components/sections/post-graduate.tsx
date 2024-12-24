@@ -19,7 +19,7 @@ export function PostGraduate() {
 
             <div className="sm:max-w-xl flex flex-col gap-4 sm:gap-8">
                 <h2 className="text-3xl font-semibold">
-                    Por que nossa Pós é única?
+                    Por que nossa <span className="text-primary">Pós é única?</span>
                 </h2>
                 <div className="flex flex-col gap-4 text-lg">
                     <p>
