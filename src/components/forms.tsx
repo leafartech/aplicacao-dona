@@ -21,7 +21,7 @@ export function Form({
 	useEffect(() => {
 		if (cont === 0) {
 			const script = document.createElement("script");
-            script.src = 'https://aprimoresisedu.activehosted.com/f/embed.php?id=25';
+            script.src = 'https://aprimoresisedu.activehosted.com/f/embed.php?id=27';
 			script.type = "text/javascript";
 			script.charset = "utf-8";
 			script.async = true;
@@ -29,7 +29,7 @@ export function Form({
 			document.body.appendChild(script);
 			cont++;
 		}
-	}, []);
+	}, [cont]);
 
 
     useEffect(() => {
@@ -59,7 +59,7 @@ export function Form({
 
 	useEffect(() => {
 		setTimeout(() => {
-			const submitButton = document.getElementById("_form_25_submit");
+			const submitButton = document.getElementById("_form_27_submit");
 			console.log(submitButton);
 			if (submitButton) {
 				submitButton.addEventListener("click", () => {
@@ -74,7 +74,7 @@ export function Form({
 
 	return (
 		<div className="w-full">
-			<div id="_forms_25" className="_form_25 w-full" />
+			<div id="_forms_27" className="_form_27 w-full" />
 		</div>
 	);
 }

@@ -36,9 +36,9 @@ export default function Page({ searchParams }: PageProps) {
 				<Header.Wrapper>
 					<div className="max-w-2xl flex flex-col gap-8 text-white">
 						<Badge
-							text="Lote de Ano Novo: Turma de 2025 com valor de 2024"
+							text="Lote de Ano Novo: Turma de 2025 com valor de 2024!"
 							icon={Gift}
-							className="max-w-[428px]"
+							className="hidden sm:inline-flex sm:items-center max-w-[428px]"
 						/>
 
 						<Header.Title>
@@ -102,7 +102,7 @@ export default function Page({ searchParams }: PageProps) {
 				</Section>
 
 				<Section classNameS="py-12 sm:py-24 bg-zinc-50 px-4 text-black">
-					<div className="flex flex-col items-start sm:items-center gap-6 sm:gap-12">
+					<div className="flex flex-col items-center sm:items-center gap-6 sm:gap-12">
 						<ProgrammaticaContent />
 
 						<Disciplines />

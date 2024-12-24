@@ -41,9 +41,9 @@ export function Modal({
 			/>
 			<div className="w-full max-w-xl py-6 px-4 sm:p-12 bg-zinc-100 z-50 rounded-xl text-black">
 				<h2 className="text-2xl font-semibold mb-4 text-center">
-					Formulário de aplicação
-				</h2>
-				<div>
+                        Formulário de aplicação
+                    </h2>
+                    <div>
 					<Form searchParams={searchParams} />
 				</div>
 			</div>

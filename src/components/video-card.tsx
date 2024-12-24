@@ -25,7 +25,7 @@ export default function VideoCard({
 				allowFullScreen
 				className={`rounded-xl w-full ${classNameVideo ? classNameVideo : "h-60"}`}
 			/>
-             
+
 			<div className="flex flex-col text-center">
 				<h4
 					className={`text-xl font-semibold ${colors ? "text-black" : "text-white"}`}

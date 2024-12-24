@@ -1,7 +1,19 @@
 import { Footer } from "@/components/congratulations/footer";
+import { Links } from "@/components/congratulations/links";
+import { Steps } from "@/components/congratulations/steps";
 import Section from "@/components/section";
 import VideoCard from "@/components/video-card";
+import type { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+    title: "Parabéns, Dona!",
+    description: "Página de agracedimento para a Dona do Plantão",
+    category: "Parabéns",
+    keywords: ["Aplicação", "Dona do Plantão", "Parabéns"],
+    robots: "noindex, nofollow",
+  };
+  
 
 export default function Page() {
 	return (
@@ -29,90 +41,10 @@ export default function Page() {
 								3 passos abaixo 👇
 							</p>
 						</div>
-						<div className="w-full px-4 flex justify-center items-center">
-							<ul className="sm:max-w-2xl flex flex-col gap-6 sm:py-12 py-8 sm:px-8 px-6 border border-zinc-600 rounded-xl">
-								<li className="flex flex-col gap-1 ">
-									<h5 className="text-xl font-semibold">
-										1. Fique atenta ao seu whatsapp:
-									</h5>
-									<p className="text-zinc-600">
-										A nossa equipe de Matrículas vai conversar com você por lá
-										para confirmar se você tem o encaixe com o perfil de
-										enfermeiras que estamos buscando.
-									</p>
-								</li>
-								<li className="flex flex-col gap-1 ">
-									<h5 className="text-xl font-semibold">
-										2. Queremos que você sinta segurança total na sua decisão:
-									</h5>
-									<p className="text-zinc-600">
-										Pode perguntar o que quiser para a nossa equipe sobre como
-										vamos tornar você DONA do seu plantão, caso você tenha você
-										tenha o encaixe com o perfil que buscamos.
-									</p>
-								</li>
-								<li className="flex flex-col gap-1 ">
-									<h5 className="text-xl font-semibold">
-										3. Por último, entre agora mesmo no Grupo Exclusivo do
-										Whatsapp{" "}
-									</h5>
-									<p className="text-zinc-600">
-										Apenas lá, nós vamos te enviar o link de matrículas na
-										segunda-feira, dia 20 de Janeiro às 07:00
-									</p>
-								</li>
-							</ul>
-						</div>
-						<div className="flex sm:flex-row flex-col justify-center items-center sm:gap-12 gap-6">
-							<div className="flex flex-col items-center">
-								<div className="relative w-[72px] h-[72px]">
-									<Image
-										src="/images/google.webp"
-										alt="Logo Gmail"
-										layout="fill"
-										objectFit="contain"
-									/>
-								</div>
-								<a
-									href="https://mail.google.com/mail/u/0/#search/Dona+do+Plantão"
-									className="bg-[#db9a1d] w-48 text-center py-2 font-semibold rounded-xl"
-								>
-									Acessar Gmail
-								</a>
-							</div>
-							<div className="flex flex-col items-center">
-								<div className="relative w-[72px] h-[72px]">
-									<Image
-										src="/images/outlook.png"
-										alt="Logo Gmail"
-										layout="fill"
-										objectFit="contain"
-									/>
-								</div>
-								<a
-									href="https://outlook.live.com/mail/0/"
-									className="bg-[#db9a1d] w-48 text-center py-2 font-semibold rounded-xl"
-								>
-									Acessar Outlook
-								</a>
-							</div>
-							<div className="flex flex-col items-center">
-								<div className="relative w-[72px] h-[72px]">
-									<Image
-										src="/images/whatsapp.png"
-										alt="Logo Gmail"
-										layout="fill"
-										objectFit="contain"
-									/>
-								</div>
-								<a
-									href="https://outlook.live.com/mail/0/"
-									className="bg-[#db9a1d] w-48 text-center py-2 font-semibold rounded-xl"
-								>
-									Acessar Whatsapp
-								</a>
-							</div>
-						</div>
+
+						<Steps />
+
+                        <Links />
 					</div>
 				</Section>
 
@@ -127,8 +59,8 @@ export default function Page() {
 									id="panda-527e4247-193a-4d1b-8d22-7481982fdb10"
 									src="https://player-vz-d6af11ef-db4.tv.pandavideo.com.br/embed/?v=bd28656d-7d65-452b-98cf-189fc1a7f3c2&iosFakeFullscreen=true"
 									title="Conheça a nossa Pós-Graduação por dentro"
-									allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture"
 									allowFullScreen
+									allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture"
 									className="rounded-xl w-full sm:h-96 h-60"
 								/>
 							</div>
