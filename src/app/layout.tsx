@@ -15,8 +15,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-br">
+    <html lang="pt-BR">
       <head>
+        {/* biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation> */}
         <script dangerouslySetInnerHTML={{
           __html: `
         (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -30,7 +31,7 @@ export default function RootLayout({
         className={`${poppins.className}`}
       >
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MLKKLHK"
-          height="0" width="0"></iframe></noscript>
+          height="0" width="0" title="Google Tag Manager" /></noscript>
         {children}
       </body>
     </html>
