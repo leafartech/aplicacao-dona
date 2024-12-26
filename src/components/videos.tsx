@@ -2,7 +2,7 @@ import VideoCard from "./video-card";
 
 export function Videos() {
 	return (
-		<div className="flex flex-wrap gap-12">
+		<div className="flex justify-center flex-wrap gap-12">
 			<VideoCard
 				colors={true}
 				name="Etiana Oliveira"

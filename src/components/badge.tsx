@@ -11,7 +11,7 @@ interface BadgeProps {
 export function Badge({ icon: Icon, text, className, iconClassName }: BadgeProps) {
   return (
     <div
-      className={`gap-2 rounded-md bg-primary px-3 py-1 text-xs text-white font-bold ${className}`}
+      className={`gap-2 rounded-md bg-primary/90 px-3 py-1 text-xs text-white font-bold ${className}`}
     >
       {Icon && <Icon className={`h-4 w-4 ${iconClassName}`} />}
       <span>{text}</span>
