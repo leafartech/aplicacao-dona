@@ -33,18 +33,16 @@ export default function Page() {
 				<Section className="sm:py-24 pt-24 pb-16 px-4">
 					<div className="flex flex-col gap-6">
 						<div className="flex flex-col text-center justify-center items-center gap-2">
-							<h2 className="text-primary-dark text-4xl font-bold">
+							<h2 className="text-primary-dark text-3xl sm:text-4xl font-bold">
 								Parabéns, Dona! Agora preste muita atenção:
 							</h2>
-							<p className="text-black text-xl max-w-2xl text-center">
+							<p className="text-black text-lg sm:text-xl max-w-2xl text-center">
 								Para garantir o desconto do Lote de Ano Novo, preste atenção nos
 								3 passos abaixo 👇
 							</p>
 						</div>
 
 						<Steps />
-
-                        <Links />
 					</div>
 				</Section>
 

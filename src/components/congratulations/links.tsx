@@ -3,7 +3,7 @@ import { LinkItem } from "./link-item";
 export function Links() {
 	return (
 		<div className="flex sm:flex-row flex-col justify-center items-center sm:gap-12 gap-6">
-			<LinkItem
+			{/* <LinkItem
 				icon="/images/google.webp"
 				alt="Logo Gmail"
 				href="https://mail.google.com/mail/u/0/#search/Dona+do+Plantão"
@@ -14,12 +14,12 @@ export function Links() {
 				alt="Logo Outlook"
 				href="https://outlook.live.com/mail/0/"
 				label="Acessar Outlook"
-			/>
+			/> */}
 			<LinkItem
 				icon="/images/whatsapp.png"
 				alt="Logo WhatsApp"
-				href="https://wa.me/"
-				label="Acessar WhatsApp"
+				href="https://devzapp.com.br/api-engennier/campanha/api/redirect/66db3b85dc4be6000187554b"
+				label="Entrar no grupo"
 			/>
 		</div>
 	);
