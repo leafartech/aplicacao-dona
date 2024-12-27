@@ -60,7 +60,6 @@ export function Form({
 	useEffect(() => {
 		setTimeout(() => {
 			const submitButton = document.getElementById("_form_28_submit");
-			console.log(submitButton);
 			if (submitButton) {
 				submitButton.addEventListener("click", () => {
 					const phoneInput = document.querySelector<HTMLInputElement>("#phone");
