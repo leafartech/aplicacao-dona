@@ -9,7 +9,6 @@ export const metadata: Metadata = {
   description: "Formulário de aplicação para a Dona do Plantão",
   category: "Aplicação",
   keywords: ["Aplicação", "Dona do Plantão"],
-  robots: "noindex, nofollow",
 };
 
 export default function RootLayout({

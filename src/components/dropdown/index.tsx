@@ -37,6 +37,7 @@ export default function Dropdown({ data }: DropdownProps) {
           isActive={isDropdownActive}
           onClick={toggleDropdown}
         />
+        
         {isDropdownActive && <DropdownContent items={data.items} />}
       </div>
     </MagicMotion>

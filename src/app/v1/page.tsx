@@ -136,11 +136,12 @@ export default function Page({ searchParams }: PageProps) {
 							Ficou com <span className="text-primary">alguma dúvida?</span>
 						</h2>
 
-						<p className="text-base sm:text-lg">
+						<p className="text-base sm:text-lg leading-relaxed">
 							Tudo o que você precisa é apertar no botão abaixo, preencher sua
 							aplicação e entrar em contato com nosso time de matrículas pelo
 							WhatsApp.
 						</p>
+
 						<Button
 							open={isOpen}
 							setOpen={setIsOpen}
