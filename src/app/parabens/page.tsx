@@ -11,7 +11,6 @@ export const metadata: Metadata = {
     description: "Página de agracedimento para a Dona do Plantão",
     category: "Parabéns",
     keywords: ["Aplicação", "Dona do Plantão", "Parabéns"],
-    robots: "noindex, nofollow",
   };
   
 
