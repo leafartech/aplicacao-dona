@@ -1,5 +1,4 @@
 import { Footer } from "@/components/congratulations/footer";
-import { Links } from "@/components/congratulations/links";
 import { Steps } from "@/components/congratulations/steps";
 import Section from "@/components/section";
 import VideoCard from "@/components/video-card";
@@ -105,7 +104,7 @@ export default function Page() {
 				</Section>
 			</main>
 
-			<Footer />
+			<Footer bgWhite={true} />
 		</>
 	);
 }

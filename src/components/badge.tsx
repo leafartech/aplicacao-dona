@@ -13,7 +13,7 @@ export function Badge({ icon: Icon, text, className, iconClassName }: BadgeProps
     <div
       className={`gap-2 rounded-md bg-primary/90 px-3 py-1 text-xs text-white font-bold ${className}`}
     >
-      {Icon && <Icon className={`h-4 w-4 ${iconClassName}`} />}
+      {Icon && <Icon className={`h-5 w-5 ${iconClassName}`} />}
       <span>{text}</span>
     </div>
   );

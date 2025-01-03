@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export function TestimonialGallery() {
 	return (
-		<Section classNameS="py-0 bg-zinc-50 px-4 text-black">
+		<Section classNameS="py-20 bg-zinc-50 px-4 text-white bg-zinc-900">
 			<div className="flex flex-col items-center gap-8 sm:gap-12 text-center">
 				<h2 className="text-3xl font-semibold text-center">
 					O que <span className="text-primary">nossas alunas</span> estão falando
