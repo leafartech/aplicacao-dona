@@ -29,7 +29,7 @@ export function WhoIsOurPostgraduateFor() {
 	};
 
 	return (
-		<Section classNameS="w-full py-16 md:py-24 bg-zinc-900">
+		<Section classNameS="w-full py-16 bg-zinc-900">
 			<div className="container px-4 md:px-6">
 				<motion.div
 					initial="hidden"
@@ -47,11 +47,11 @@ export function WhoIsOurPostgraduateFor() {
 							<span className="font-bold text-primary">pós-graduação</span> é
 							ideal para{" "}
 							<span className="font-bold text-primary">
-								profissionais de saúde ambiciosos
+								profissionais de saúde ambiciosos{" "}
 							</span>
 							que buscam{" "}
 							<span className="font-bold text-primary">
-								impactar positivamente
+								impactar positivamente{" "}
 							</span>
 							e transformar suas carreiras. Ao participar do programa, você se
 							junta a uma incrível{" "}
@@ -78,6 +78,7 @@ export function WhoIsOurPostgraduateFor() {
 						/>
 					</motion.div>
 				</motion.div>
+
 				<motion.div
 					variants={containerVariants}
 					initial="hidden"

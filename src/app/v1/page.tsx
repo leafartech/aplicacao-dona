@@ -61,7 +61,6 @@ export default function Page({ searchParams }: PageProps) {
 
 					<Header.Image />
 				</Header.Wrapper>
-				<CircleShadow />
 			</Header.Root>
 
 			<main>

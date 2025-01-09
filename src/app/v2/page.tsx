@@ -15,7 +15,7 @@ import { Badge } from "@/components/ui/badge";
 import VideoCard from "@/components/video-card";
 import { Videos } from "@/components/videos";
 import { disciplines } from "@/constants/disciplines";
-import { GraduationCap } from "lucide-react";
+import { GraduationCap, HelpCircle } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -62,9 +62,6 @@ export default function Page({ searchParams }: PageProps) {
 
 					<Header.Image />
 				</Header.Wrapper>
-
-				<CircleShadow className="left-0 sm:right-0 sm:top-0 bottom-0" />
-				<CircleShadow className="right-0 sm:left-0 sm:bottom-0 top-0" />
 			</Header.Root>
 
 			<main>
@@ -84,7 +81,7 @@ export default function Page({ searchParams }: PageProps) {
 
 				<WhoIsOurPostgraduateFor />
 
-				<Section classNameS="relative py-14 sm:py-24 bg-zinc-900 px-4">
+				<Section classNameS="relative pb-16 bg-zinc-900 px-4">
 					<div className="flex flex-col items-center gap-8 sm:gap-12 text-white">
 						<h2 className="text-3xl font-semibold">
 							Confira nossa{" "}
@@ -136,6 +133,10 @@ export default function Page({ searchParams }: PageProps) {
 				<TestimonialGallery />
 
 				<Section classNameS="py-12 sm:py-24 bg-zinc-50 px-4 text-black">
+					<div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary">
+						<HelpCircle className="w-6 h-6" />
+					</div>
+                    
 					<div className="flex flex-col items-center gap-4 max-w-xl text-center">
 						<h2 className="text-3xl font-semibold">
 							Ficou com <span className="text-primary">alguma dúvida?</span>
