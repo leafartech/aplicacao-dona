@@ -11,13 +11,14 @@ import Autoplay from "embla-carousel-autoplay";
 
 export function TestimonialGallery() {
 	return (
-		<Section classNameS="py-20 bg-zinc-50 px-4 text-white bg-zinc-900">
+		<Section classNameS="py-20 bg-zinc-50 px-4 text-white bg-zinc-900 overflow-hidden">
 			<div className="flex flex-col items-center gap-8 sm:gap-12 text-center">
 				<h2 className="text-3xl font-semibold text-center">
 					O que <span className="text-primary">nossas alunas</span> estão
 					falando
 				</h2>
 			</div>
+            
 			<Carousel
 				className="flex sm:flex-row flex-col gap-8 justify-center mt-8"
 				plugins={[
@@ -57,8 +58,8 @@ export function TestimonialGallery() {
 					</CarouselItem>
 				</CarouselContent>
                 
-				<CarouselPrevious className="bg-zinc-50" />
-				<CarouselNext className="bg-zinc-50" />
+				<CarouselPrevious className="hidden sm:flex sm:absolute bg-zinc-50" />
+				<CarouselNext className="hidden sm:flex sm:absolute bg-zinc-50" />
 			</Carousel>
 		</Section>
 	);

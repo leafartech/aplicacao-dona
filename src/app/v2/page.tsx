@@ -133,7 +133,7 @@ export default function Page({ searchParams }: PageProps) {
 				<TestimonialGallery />
 
 				<Section classNameS="py-12 sm:py-24 bg-zinc-50 px-4 text-black">
-					<div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary">
+					<div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary-light/10 text-primary">
 						<HelpCircle className="w-6 h-6" />
 					</div>
                     
@@ -149,9 +149,9 @@ export default function Page({ searchParams }: PageProps) {
 						</p>
 
 						<Button
-							open={isOpen}
-							setOpen={setIsOpen}
-							label="Quero preencher a aplicação"
+                            open={isOpen}
+                            setOpen={setIsOpen}
+							label="Fale com nosso time de matrículas"
 						/>
 					</div>
 				</Section>

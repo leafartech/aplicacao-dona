@@ -1,15 +1,13 @@
 import type React from "react";
 import type { SetStateAction } from "react";
 
-export default function Button({
-	label,
-	open,
-	setOpen,
-}: {
+interface ButtonProps {
 	label: string;
 	open: boolean;
 	setOpen: React.Dispatch<SetStateAction<boolean>>;
-}) {
+}
+
+export default function Button({ label, open, setOpen }: ButtonProps) {
 	return (
 		<button
 			type="button"
