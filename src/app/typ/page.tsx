@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 export default function Page() {
 	return (
 		<>
-			<div className="min-h-screen bg-typ flex flex-col items-center justify-center border-b-4 border-[#c4ecf4] px-4 pb-8">
+			<div className="min-h-screen bg-zinc-800 flex flex-col items-center justify-center border-b-4 border-[#c4ecf4] px-4 pb-8">
 				<header className="bg-zinc-800 fixed top-0 left-0 w-full z-[9999] flex justify-center items-center py-2 shadow-lg">
 					<div className="relative w-[240px] h-[32px]">
 						<Image
