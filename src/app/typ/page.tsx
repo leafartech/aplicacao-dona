@@ -1,9 +1,7 @@
 import { LinkItem } from "@/components/congratulations/link-item";
-import ProgressBar from "@/components/progress-bar";
+import CountdownTimer from "@/components/countdown-timer";
 import type { Metadata } from "next";
 import Image from "next/image";
-
-const steps = [{ id: 1 }, { id: 2 }, { id: 3 }];
 
 export const metadata: Metadata = {
 	title: "Último Passo - Dona do Plantão",
@@ -43,24 +41,26 @@ export default function Page() {
 							ÚLTIMO PASSO para você garantir o seu desconto 👇
 						</h2>
 
-						<ProgressBar steps={steps} currentStep={3} showPercentage={true} />
-
-						<section className="text-lg text-left space-y-4 bg-zinc-700 p-6 rounded-lg shadow-lg">
+						<section className="text-lg text-left space-y-4 p-6 rounded-lg shadow-lg">
 							<p>
-								<strong>IMPORTANTE:</strong> No dia{" "}
-								<span className="text-primary">3 de Fevereiro</span>, você
-								poderá se matricular ainda com o valor de 2024 no{" "}
+								No dia <span className="text-primary">3 de Fevereiro</span>,
+								você poderá se matricular ainda com o valor de 2024 no{" "}
 								<strong>Lote de Ano Novo</strong>, antes do reajuste para 2025.
 								Além disso, bônus especiais serão oferecidos às primeiras
 								matriculadas.
 							</p>
 							<p>
-								Para garantir o desconto e receber os avisos, é necessário
-								entrar no grupo exclusivo do WhatsApp. Não se esqueça de salvar
-								nosso contato para priorizar o envio do link.
+								Então, para garantir que você vai receber todos os avisos e
+								receber o seu cupom de desconto, você precisa entrar no grupo
+								exclusivo do Whatsapp para receber todos os avisos e os links
+								promocionais da abertura oficial do Lote de Ano Novo.
 							</p>
-							<p className="text-yellow-400 font-semibold">
-								Sem este passo, não poderemos garantir sua inscrição!
+							<p className="font-semibold">
+								OBS: é muito importante que você{" "}
+								<span className="text-primary-dark">
+									salve o nosso contato para receber o link com prioridade
+								</span>
+								. Sem cumprir esse passo, não poderemos garantir sua inscrição.
 							</p>
 						</section>
 
@@ -72,6 +72,8 @@ export default function Page() {
 								label="Confirmar Inscrição"
 							/>
 						</div>
+
+						<CountdownTimer />
 					</div>
 				</main>
 			</div>
