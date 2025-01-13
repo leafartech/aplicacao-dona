@@ -7,13 +7,13 @@ export function PostGraduate() {
 	return (
 		<Section classNameS="py-16 sm:py-24 bg-zinc-50 px-4 text-black">
 			<div className="grid gap-8 sm:grid-cols-2 items-center">
-				<div className="relative sm:w-[512px] sm:h-[394px] mx-auto">
+				<div className="relative sm:w-[512px] sm:h-[336px] mx-auto">
 					<Image
 						src="/images/group.png"
 						alt="Ted Talks - Imagem representando aprendizado prático"
 						layout="fill"
 						objectFit="contain"
-						className="rounded-xl shadow-lg"
+						className="rounded-2xl shadow-lg"
 					/>
 				</div>
 

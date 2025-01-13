@@ -56,9 +56,9 @@ export function WhoIsOurPostgraduateFor() {
 							e transformar suas carreiras. Ao participar do programa, você se
 							junta a uma incrível{" "}
 							<span className="font-bold text-primary">
-								comunidade de enfermeiros visionários {" "}
+								comunidade de enfermeiras visionárias {" "}
 							</span>
-							comprometidos com a excelência no cuidado ao paciente , inovação e
+							comprometidas com a excelência no cuidado ao paciente , inovação e
 							liderança. Prepare-se para alcançar novos patamares e contribuir
 							de maneira significativa para o futuro da{" "}
 							<span className="font-bold text-primary">enfermagem</span>.
@@ -90,7 +90,7 @@ export function WhoIsOurPostgraduateFor() {
 							key={`${category}-${index + 1}`}
 							variants={itemVariants}
 						>
-							<Card className="group relative h-full overflow-hidden transition-colors hover:bg-zinc-50">
+							<Card className="bg-white group relative h-full overflow-hidden transition-colors hover:bg-zinc-50">
 								<CardContent className="p-6">
 									<div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary-light/20">
 										{category.icon}
