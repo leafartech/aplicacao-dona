@@ -41,7 +41,7 @@ export default function Page() {
 							ÚLTIMO PASSO para você garantir o seu desconto 👇
 						</h2>
 
-						<section className="text-lg text-left space-y-4 p-6 rounded-lg shadow-lg">
+						<section className="text-lg text-center space-y-4 p-6 rounded-lg shadow-lg">
 							<p>
 								No dia <span className="text-primary">3 de Fevereiro</span>,
 								você poderá se matricular ainda com o valor de 2024 no{" "}
