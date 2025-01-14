@@ -119,9 +119,6 @@ form ._form-label {
 }
 
 @layer base {
-	* {
-		@apply border-border;
-	}
 	body {
 		@apply bg-background text-foreground;
 	}
