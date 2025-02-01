@@ -56,7 +56,7 @@ export function CountdownTimer() {
 		setTimeout(() => {
 			window.location.href =
 				"https://devzapp.com.br/api-engennier/campanha/api/redirect/66db3b85dc4be6000187554b";
-		}, 8000);
+		}, 10000);
 	}, []);
 
 	if (!isMounted) {
