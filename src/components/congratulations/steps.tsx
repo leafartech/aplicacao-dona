@@ -41,7 +41,7 @@ export function Steps() {
 						</p>
 					</li>
 
-					<li className="col-span-2 flex flex-col gap-3 p-6 bg-zinc-100 border border-zinc-300 rounded-xl shadow-sm hover:shadow-lg transition-shadow">
+					{/* <li className="col-span-2 flex flex-col gap-3 p-6 bg-zinc-100 border border-zinc-300 rounded-xl shadow-sm hover:shadow-lg transition-shadow">
 						<div className="flex items-center gap-3">
 							<span className="flex items-center justify-center w-10 h-10 rounded-full bg-red-100 text-red-600 font-bold">
 								3
@@ -53,10 +53,10 @@ export function Steps() {
 						<p className="text-sm text-zinc-600">
 							Entre no nosso grupo vip e silencioso de whatsapp. É lá que vamos te enviar o link de <strong>matrículas na segunda-feira, dia 20 de janeiro</strong> às 7:00.
 						</p>
-					</li>
+					</li> */}
 				</ul>
 
-				<Links />
+				{/* <Links /> */}
 			</div>
 		</div>
 	);

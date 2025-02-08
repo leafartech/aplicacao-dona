@@ -34,10 +34,10 @@ export default function Page() {
 							<h2 className="text-primary-dark text-3xl sm:text-4xl font-bold">
 								Parabéns, Dona! Agora preste muita atenção:
 							</h2>
-							<p className="text-black text-lg sm:text-xl max-w-2xl text-center">
+							{/* <p className="text-black text-lg sm:text-xl max-w-2xl text-center">
 								Para garantir o desconto do Lote de Ano Novo, preste atenção nos
 								3 passos abaixo 👇
-							</p>
+							</p> */}
 						</div>
 
 						<Steps />

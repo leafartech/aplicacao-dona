@@ -8,7 +8,7 @@ import DropdownContent from "./dropdown-content";
 interface DropdownProps {
   data: {
     title: string;
-    items: string[];
+    // items: string[];
   };
 }
 
@@ -22,14 +22,14 @@ export default function Dropdown({ data }: DropdownProps) {
   const [subtitle, title] = data.title.split("|");
 
   return (
-    <MagicMotion
-      transition={{
-        type: "spring",
-        stiffness: 180,
-        damping: 20,
-        mass: 1.1,
-      }}
-    >
+    // <MagicMotion
+    //   transition={{
+    //     type: "spring",
+    //     stiffness: 180,
+    //     damping: 20,
+    //     mass: 1.1,
+    //   }}
+    // >
       <div className="overflow-hidden max-w-2xl">
         <DropdownButton
           subtitle={subtitle}
@@ -38,8 +38,8 @@ export default function Dropdown({ data }: DropdownProps) {
           onClick={toggleDropdown}
         />
         
-        {isDropdownActive && <DropdownContent items={data.items} />}
+        {/* {isDropdownActive && <DropdownContent items={data.items} />} */}
       </div>
-    </MagicMotion>
+    // </MagicMotion>
   );
 }

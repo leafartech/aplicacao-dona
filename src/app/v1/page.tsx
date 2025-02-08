@@ -36,11 +36,11 @@ export default function Page({ searchParams }: PageProps) {
 				<Header.Wrapper>
 					<div className="max-w-2xl flex flex-col gap-8 text-white">
 						<div className="flex flex-col items-start gap-4">
-							<Badge
+							{/* <Badge
 								text="Lote de Ano Novo: Turma de 2025 com valor de 2024!"
 								icon={Gift}
 								className="flex items-center"
-							/>
+							/> */}
 
 							<Header.Title>
 								Pós-Graduação em{" "}

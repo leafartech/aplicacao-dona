@@ -5,9 +5,9 @@ import { HiOutlineClock } from "react-icons/hi2";
 
 const getTimeUntilTarget = (): { days: number; hours: number; minutes: number; seconds: number } => {
     const now = new Date();
-    const targetDate = new Date(now.getFullYear(), 1, 3, 6, 30, 0); // 3 de fevereiro às 6:30 AM
+    // const targetDate = new Date(now.getFullYear(), 1, 3, 6, 30, 0); // 3 de fevereiro às 6:30 AM
 
-    // const targetDate = new Date(); // 🔹 Define o target como 1 hora atrás
+    const targetDate = new Date(); // 🔹 Define o target como 1 hora atrás
 
     // Se a data alvo já passou neste ano, define para o próximo ano
     if (now > targetDate) {
