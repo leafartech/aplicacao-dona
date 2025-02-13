@@ -110,7 +110,7 @@ export default function Page({ searchParams }: PageProps) {
 					<div className="flex flex-col items-center sm:items-center gap-6 sm:gap-12">
 						<ProgrammaticaContent />
 
-						<DisciplineList disciplines={disciplines} />
+						{/* <DisciplineList disciplines={disciplines} /> */}
 
 						<div className="w-full flex flex-col items-center gap-12">
 							<div className="relative h-[150px] w-[150px]">

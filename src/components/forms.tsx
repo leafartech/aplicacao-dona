@@ -62,6 +62,44 @@ export function Form({ searchParams: { utm_campaign, utm_content, utm_medium, ut
 
     useEffect(() => {
         setTimeout(() => {
+            const form = document.querySelector<HTMLFormElement>('form._form');
+            const submitButton = document.getElementById('_form_31_submit');
+
+            if (form && submitButton) {
+                // Remover possíveis eventListeners duplicados adicionados pelo script externo
+                const newForm = form.cloneNode(true) as HTMLFormElement;
+                form.parentNode?.replaceChild(newForm, form);
+
+                newForm.addEventListener('submit', (event) => {
+                    let isValid = true;
+                    const inputs = newForm.querySelectorAll<HTMLInputElement | HTMLSelectElement>('input, select');
+
+                    inputs.forEach(input => {
+                        if (input.value.includes('?')) {
+                            isValid = false;
+                            input.classList.add('border-red-500'); // Adiciona uma borda vermelha para indicar erro
+                        } else {
+                            input.classList.remove('border-red-500'); // Remove a borda vermelha caso esteja corrigido
+                        }
+                    });
+
+                    if (!isValid) {
+                        event.preventDefault(); // Bloqueia o envio do formulário
+                        event.stopPropagation(); // Impede que outros eventos continuem propagando
+                        alert('Por favor, preencha todos os campos corretamente antes de enviar.');
+                        newForm.onsubmit = () => false; // Impede o envio mesmo se um script externo tentar submeter
+                        return false;
+                    }
+
+                    newForm.onsubmit = null; // Remove restrição para permitir envio
+                    return true;
+                });
+            }
+        }, 2000);
+    }, []);
+
+    useEffect(() => {
+        setTimeout(() => {
             const selectElements = document.querySelectorAll<HTMLSelectElement>('select');
 
             // Adiciona o evento change a cada select
