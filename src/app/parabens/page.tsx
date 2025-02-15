@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { Footer } from "@/components/congratulations/footer";
 import { Steps2 } from "@/components/congratulations/steps";
@@ -6,41 +6,13 @@ import Section from "@/components/section";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 
-// export const metadata: Metadata = {
-// 	title: "Parabéns, Dona!",
-// 	description: "Página de agracedimento para a Dona do Plantão",
-// 	category: "Parabéns",
-// 	keywords: ["Aplicação", "Dona do Plantão", "Parabéns"],
-// };
-
-
 export default function Page() {
 
-	const iframeRef = useRef<HTMLIFrameElement>(null);
-
 	useEffect(() => {
-	  const observer = new MutationObserver(() => {
-		const iframe = iframeRef.current;
-		if (iframe) {
-		  try {
-			const iframeDoc = iframe.contentWindow?.document;
-			if (iframeDoc) {
-			  const footer = iframeDoc.getElementById("powered_by_footer");
-			  if (footer) {
-				footer.style.display = "none"; // Esconde o elemento
-			  }
-			}
-		  } catch (err) {
-			console.warn("Não foi possível acessar o iframe diretamente.");
-		  }
-		}
-	  });
-  
-	  observer.observe(document, { childList: true, subtree: true });
-  
-	  return () => observer.disconnect();
-	}, []);
-  
+
+		if (typeof window !== 'undefined')
+			document.querySelector("body")?.classList.remove("overflow-hidden");
+	}, [])
 
 	return (
 		<>

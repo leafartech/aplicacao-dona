@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
@@ -90,7 +90,6 @@ export function Form2({ searchParams: { utm_campaign, utm_content, utm_medium, u
                 });
 
             } catch (error) {
-
                 setTimeout(() => {
                     if (
                         (trabalhaComoEnfermeira && faculdadePrivada && temPosGraduacao) ||
