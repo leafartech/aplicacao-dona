@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export function PostGraduate() {
 	return (
-		<Section classNameS="py-16 sm:py-24 bg-zinc-50 px-4 text-black">
+		<Section classNameS="pb-6 sm:py-24 bg-zinc-50 px-4 text-black">
 			<div className="grid gap-8 sm:grid-cols-2 items-center">
 				<div className="relative sm:w-[512px] sm:h-[336px] mx-auto">
 					<Image

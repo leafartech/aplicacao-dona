@@ -1,5 +1,6 @@
 'use client'
 
+import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
 interface FormProps {
@@ -13,7 +14,9 @@ interface FormProps {
     }
 }
 
-export function Form({ searchParams: { utm_campaign, utm_content, utm_medium, utm_source, utm_term } }: FormProps) {
+export function Form2({ searchParams: { utm_campaign, utm_content, utm_medium, utm_source, utm_term } }: FormProps) {
+
+    const { push } = useRouter()
 
     let cont = 0
     useEffect(() => {
@@ -60,6 +63,50 @@ export function Form({ searchParams: { utm_campaign, utm_content, utm_medium, ut
         }
     }, [cont])
 
+    async function sendData() {
+        const form = document.querySelector<HTMLFormElement>('form._form');
+
+        if (form) {
+            const formData = new FormData(form);
+            const postData = new URLSearchParams();
+
+            formData.forEach((value, key) => {
+                postData.append(key, value.toString());
+            });
+
+            const trabalhaComoEnfermeira = postData.get('field[649]') === "Sim";
+            const faculdadePrivada = postData.get('field[650]') === "Faculdade Privada";
+            const faculdadePublica = postData.get('field[650]') === "Faculdade Pública";
+            const temPosGraduacao = postData.get('field[651]') === "Sim";
+            const rendaMensal = postData.get('field[652]');
+
+            try {
+                await fetch('https://aprimoresisedu.activehosted.com/proc.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: postData,
+                });
+
+            } catch (error) {
+
+                setTimeout(() => {
+                    if (
+                        (trabalhaComoEnfermeira && faculdadePrivada && temPosGraduacao) ||
+                        (trabalhaComoEnfermeira && faculdadePublica && temPosGraduacao) ||
+                        (trabalhaComoEnfermeira && faculdadePrivada && !temPosGraduacao) ||
+                        (!trabalhaComoEnfermeira && (rendaMensal === "De R$5.000,00 a R$10.000,00" || rendaMensal === "Mais de R$10.000,00"))
+                    ) {
+                        push('/parabens2')
+                    } else {
+                        push('/parabens')
+                    }
+                }, 2000)
+            }
+        }
+    }
+
     useEffect(() => {
         setTimeout(() => {
             const form = document.querySelector<HTMLFormElement>('form._form');
@@ -91,8 +138,11 @@ export function Form({ searchParams: { utm_campaign, utm_content, utm_medium, ut
                         return false;
                     }
 
-                    newForm.onsubmit = null; // Remove restrição para permitir envio
-                    return true;
+                    event.preventDefault(); // Bloqueia o envio padrão
+                    event.stopPropagation();
+
+                    // Enviando os dados manualmente para Active
+                    sendData()
                 });
             }
         }, 2000);

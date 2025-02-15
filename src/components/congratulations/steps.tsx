@@ -61,3 +61,60 @@ export function Steps() {
 		</div>
 	);
 }
+export function Steps2() {
+	return (
+		<div className="w-full sm:px-4 flex justify-center items-center">
+			<div className="sm:max-w-6xl flex flex-col gap-6 bg-zinc-100 shadow-lg sm:py-12 py-8 sm:px-10 px-6 border border-zinc-300 rounded-2xl">
+				<h2 className="text-2xl font-bold text-center text-zinc-800">
+					Como funciona o próximo passo?
+				</h2>
+
+				<ul className="max-w-xl flex flex-col gap-4">
+				<li className="flex flex-col gap-3 p-6 bg-zinc-100 border border-zinc-300 rounded-xl shadow-sm hover:shadow-lg transition-shadow">
+						<div className="flex items-center gap-3">
+							<span className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-100 text-blue-600 font-bold">
+								1
+							</span>
+							<h5 className="text-lg font-semibold text-zinc-800">
+								Conclua sua aplicação:
+							</h5>
+						</div>
+						<p className="text-sm text-zinc-600">
+							Para concluir a sua aplicação, basta marcar um horário no calendário abaixo para conversar diretamente com o nosso time.
+						</p>
+					</li>
+
+					<li className="flex flex-col gap-3 p-6 bg-zinc-100 border border-zinc-300 rounded-xl shadow-sm hover:shadow-lg transition-shadow">
+						<div className="flex items-center gap-3">
+							<span className="flex items-center justify-center w-10 h-10 rounded-full bg-green-100 text-green-600 font-bold">
+								2
+							</span>
+							<h5 className="text-lg font-semibold text-zinc-800">
+								Detalhes:
+							</h5>
+						</div>
+						<p className="text-sm text-zinc-600">
+							A chamada dura de 30 a 40 minutos e serve para a gente dar 100% de atenção e confirmar se conseguimos te ajudar com o que você está procurando.
+						</p>
+					</li>
+
+					{/* <li className="col-span-2 flex flex-col gap-3 p-6 bg-zinc-100 border border-zinc-300 rounded-xl shadow-sm hover:shadow-lg transition-shadow">
+						<div className="flex items-center gap-3">
+							<span className="flex items-center justify-center w-10 h-10 rounded-full bg-red-100 text-red-600 font-bold">
+								3
+							</span>
+							<h5 className="text-lg font-semibold text-zinc-800">
+								Grupo de Whatsapp:
+							</h5>
+						</div>
+						<p className="text-sm text-zinc-600">
+							Entre no nosso grupo vip e silencioso de whatsapp. É lá que vamos te enviar o link de <strong>matrículas na segunda-feira, dia 20 de janeiro</strong> às 7:00.
+						</p>
+					</li> */}
+				</ul>
+
+				{/* <Links /> */}
+			</div>
+		</div>
+	);
+}

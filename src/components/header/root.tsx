@@ -11,3 +11,10 @@ export function Root({ children }: RootProps) {
 		</header>
 	);
 }
+export function Root2({ children }: RootProps) {
+	return (
+		<header className="relative w-full sm:h-screen h-[900px] flex sm:items-center sm:justify-center items-start sm:pt-0 pt-12  bg-gradient-to-br from-zinc-950 via-zinc-900 to-primary-dark">
+			{children}
+		</header>
+	);
+}
