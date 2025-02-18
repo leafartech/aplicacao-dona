@@ -1,19 +1,20 @@
+"use client"
+
 import { Footer } from "@/components/congratulations/footer";
 import { Steps } from "@/components/congratulations/steps";
 import Section from "@/components/section";
 import VideoCard from "@/components/video-card";
-import type { Metadata } from "next";
 import Image from "next/image";
-
-export const metadata: Metadata = {
-    title: "Parabéns, Dona!",
-    description: "Página de agracedimento para a Dona do Plantão",
-    category: "Parabéns",
-    keywords: ["Aplicação", "Dona do Plantão", "Parabéns"],
-  };
-  
+import { useEffect } from "react";
 
 export default function Page() {
+
+	useEffect(() => {
+
+		if (typeof window !== 'undefined')
+			document.querySelector("body")?.classList.remove("overflow-hidden");
+	}, [])
+
 	return (
 		<>
 			<main className="bg-zinc-100 min-h-screen w-full text-black">

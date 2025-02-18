@@ -77,7 +77,7 @@ export function Form2({ searchParams: { utm_campaign, utm_content, utm_medium, u
             const trabalhaComoEnfermeira = postData.get('field[649]') === "Sim";
             const faculdadePrivada = postData.get('field[650]') === "Faculdade Privada";
             const faculdadePublica = postData.get('field[650]') === "Faculdade Pública";
-            const temPosGraduacao = postData.get('field[651]') === "Sim";
+            const estaFormada = postData.get('field[651]') !== "Ainda não estou formada";
             const rendaMensal = postData.get('field[652]');
 
             try {
@@ -91,15 +91,17 @@ export function Form2({ searchParams: { utm_campaign, utm_content, utm_medium, u
 
             } catch (error) {
                 setTimeout(() => {
-                    if (
-                        (trabalhaComoEnfermeira && faculdadePrivada && temPosGraduacao) ||
-                        (trabalhaComoEnfermeira && faculdadePublica && temPosGraduacao) ||
-                        (trabalhaComoEnfermeira && faculdadePrivada && !temPosGraduacao) ||
+                    if (!estaFormada) {
+                        push('/parabens2')
+                    } else if (
+                        (trabalhaComoEnfermeira && faculdadePrivada && estaFormada) ||
+                        (trabalhaComoEnfermeira && faculdadePublica && estaFormada) ||
+                        (trabalhaComoEnfermeira && faculdadePrivada && !estaFormada) ||
                         (!trabalhaComoEnfermeira && (rendaMensal === "De R$5.000,00 a R$10.000,00" || rendaMensal === "Mais de R$10.000,00"))
                     ) {
-                        push('/parabens2')
-                    } else {
                         push('/parabens')
+                    } else {
+                        push('/parabens2')
                     }
                 }, 2000)
             }
