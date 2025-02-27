@@ -5,7 +5,7 @@ import Button from "@/components/button";
 import { Disciplines } from "@/components/disciplines";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/home/footer";
-import { Modal2 } from "@/components/modal2";
+import { Modal3 } from "@/components/modal3";
 import { ProgrammaticaContent } from "@/components/programmatic-content";
 import Section from "@/components/section";
 import { PostGraduate } from "@/components/sections/post-graduate";
@@ -51,6 +51,7 @@ export default function Page({ searchParams }: PageProps) {
 						<Header.List />
 
 						<Button
+							modal={true}
 							open={isOpen}
 							setOpen={setIsOpen}
 							label="QUERO RESGATAR MEU DESCONTO"
@@ -147,7 +148,7 @@ export default function Page({ searchParams }: PageProps) {
 					</div>
 				</Section>
 
-				<Modal2 searchParams={searchParams} open={isOpen} setOpen={setIsOpen} />
+				<Modal3 open={isOpen} setOpen={setIsOpen} />
 			</main>
 
 			<Footer />
