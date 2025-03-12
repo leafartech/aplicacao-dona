@@ -304,6 +304,21 @@ export function Form3() {
         const utm_source = new URLSearchParams(window.location.search).get('utm_source') || 'nao-traqueado'
         const utm_medium = new URLSearchParams(window.location.search).get('utm_medium') || 'nao-traqueado'
 
+        const goldLeadQualification = 
+            data.trabalha_como_enfermeira === 'Sim'
+            && data.tem_pos !== 'Sim, já concluí'
+            && data.prioridade_carreira === 'Quero atuar na assistência: hospital / homecare / atenção básica / uti / emergência / enfermaria, etc…'
+            && data.renda_mensal !== 'Até R$2.000,00'
+
+        let lead_qualified = ''
+        if (data.quanto_tempo_formada === 'Ainda não estou formada') {
+            lead_qualified = 'bronze'
+        } else if (goldLeadQualification) {
+            lead_qualified = 'ouro'
+        } else {
+            lead_qualified = 'prata'
+        }
+
         try {
             // const response = await fetch('https://rest.gohighlevel.com/v1/contacts/', {
             const response = await fetch('https://services.leadconnectorhq.com/hooks/V4asAT7IrV5IdErLl2Fr/webhook-trigger/10b76af7-c88c-42bf-a22c-1936cd479ffa', {
@@ -323,7 +338,8 @@ export function Form3() {
                     utm_term,
                     utm_source,
                     utm_medium,
-                    pagina: 'v3'
+                    pagina: 'v3',
+                    lead_qualification: lead_qualified
                 })
             });
 
@@ -333,11 +349,12 @@ export function Form3() {
                 throw new Error(result.message || 'Erro ao enviar os dados');
             }
 
-            // if (data.quanto_tempo_formada !== 'Ainda não estou formada') {
-            //     push('/parabens')
-            // } else {
-            //     push('/parabens2')
-            // }
+            if (data.quanto_tempo_formada !== 'Ainda não estou formada') {
+                push('/parabens')
+            } else {
+                // push('/parabens2')
+                push('/parabens')
+            }
 
             console.log('Contato criado com sucesso:', result);
         } catch (error) {
