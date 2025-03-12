@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import type React from "react";
-import { useState, type SetStateAction } from "react";
+import { type SetStateAction } from "react";
 
 interface ButtonProps {
 	label: string;
